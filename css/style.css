@@ -40,6 +40,7 @@ header .category > li:hover > a{ background-color:#96da47; }
 
 
 
+/* sub메뉴 */
 header .category > li { position:relative; }
 .sub { 
     background-color:#282d30; 
@@ -55,8 +56,46 @@ header .category > li { position:relative; }
 .submenu li a:hover { color:#96da47; }
 .submenu li.subtitle { color:#fff; font-size:15px; margin-bottom:10px; }
 
+
+/* sub메뉴 호버할때 display*/
+/*
 .sub { display:none; }
 .category > li:hover .sub { display:block; }
+*/
+
+
+/* sub메뉴 호버할때 visiblity - 트랜스폼 사용 가능 */
+.sub { visibility:hidden; transform:translateY(20px); opacity:0; }
+.category > li:hover .sub { visibility:visible; transform:translateY(0px); opacity:1; transition:all .5s ease; }
+
+
+
+
+
+
+
+
+
+.slider .banner { width:100%; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*
@@ -96,3 +135,30 @@ header h1 {
     background-color:yellowgreen;
 }
 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
