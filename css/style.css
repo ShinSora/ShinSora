@@ -55,6 +55,9 @@ header .category > li { position:relative; }
 .submenu li a:hover { color:#96da47; }
 .submenu li.subtitle { color:#fff; font-size:15px; margin-bottom:10px; }
 
+.sub { display:none; }
+.category > li:hover .sub { display:block; }
+
 
 /*
 header {
