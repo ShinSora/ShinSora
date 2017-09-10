@@ -75,8 +75,124 @@ header .category > li { position:relative; }
 
 
 
-
 .slider .banner { width:100%; }
+
+
+
+
+
+
+
+
+
+/* 딜 */
+#dealSection { padding:40px 0; background-color:#96da47; }
+.deal { height:46px; text-align:center; line-height:46px; } 
+.deal > div { display:inline-block; vertical-align:middle } /* 버티컬어라인은 인라인만 정렬됨 */ 
+.deal_title { color:#fff; font-family:impact; font-size:30px; }
+.dash { width:40px; height:1px; background:#222; margin:0 10px; }
+.deal_desc { font-size:28px; }
+.deal_btn { width:140px; background:#fff; color:#222; font-weight:bold; margin-left:20px; font-size:12px; cursor:pointer; position:relative; } 
+/* cursor pointer 하면 손가락모양으로 바뀜 */
+
+
+
+.deal_btn::after {
+    content:'VIEW ALL OFFERS'; /* 가상선택자의 필수 속성 */
+    color:#fff;
+    display:block; 
+    position:absolute; top:0; left:0; right:0; bottom:0; background:#222;
+    transform:scaleY(0);
+    transition:all .5s ease;
+    transform-origin:bottom; /* 트랜스폼이 만들어지는 기준 */
+/*    z-index:-1;*/
+}
+
+
+.deal_btn:hover::after {
+    transform:scaleY(1);
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 프로덕트 */
+
+#productView { padding:80px 0; width:1200px; margin:0 auto;}
+.product_title { text-align:center; font-family:impact; font-size:30px; }
+.under_line { margin:20px auto 30px; width:30px; height:1px; background-color:#bbb; }
+
+
+
+
+.view_item { width:25%; float:left; }
+.view_inner { margin:0 15px; }
+.view_inner .dp, .view_inner .motion { width:100%; }
+.thumnails { position:relative; }
+.thumnails img { display: block; } /* 이미지 아래 공백을 없애기 위해서 */
+.thumnails .motion { position:absolute; top:0; left:0; }
+
+.image { position:relative; }
+.block { position:absolute; bottom:0; width:100%; padding:3px 2px; box-sizing:border-box; }
+.block_list {}
+.block_list li { width:40px; height:40px; background:#fff; float:left; margin:0 1px; text-align:center; line-height:40px; }
+.block_list li.cart { width:calc(100% - 86px); }
+
+
+
+
+
+
+
+
+
+
+/* 프로덕트 기능 */
+.view_inner .image { overflow:hidden; }
+.block { 
+    transform:translateY(46px); 
+    transition:all .6s ease;
+}
+.block_list li { cursor:pointer; }
+.view_inner:hover .block{ 
+    transform:translateY(0px); 
+}
+
+.thumnails { perspective:500px; } /*원근감*/
+.thumnails .motion {
+    transform: scale(0.8) rotateY(90deg) ;
+    transition:all .6s ease;
+}
+.thumnails:hover .motion{
+    transform: scale(1) rotateY(0deg);
+    
+}
+
+
+
+
+
+
+
+
+
+
+/* 스와이프 플러그인 */ 
+
+
+
+
 
 
 
